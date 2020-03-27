@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Hello">
+        <lightning-button label="Record" slot="actions"></lightning-button>
+        <div if:true={isVisible}>
+            <lightning-record-view-form record-id={parentId}
+            object-api-name="Account">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Website"></lightning-output-field>
+            </lightning-record-view-form>
+        </div>
+        <p slot="footer">Footnote: This component may display some parent company info.</p>
+    </lightning-card>
+</template>
